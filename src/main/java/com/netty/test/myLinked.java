@@ -134,6 +134,7 @@ public class myLinked {
         //删除链表中的值
         myLinked.remove(4);
         myLinked.output();
+        System.out.println("测试一下");
     }
 
 
