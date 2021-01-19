@@ -1,4 +1,4 @@
-package com.netty.secodexample;
+package com.nettyold.secodexample;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;

@@ -1,4 +1,4 @@
-package com.netty.test.sort;
+package com.nettyold.test.sort;
 
 import java.util.Arrays;
 
@@ -9,6 +9,8 @@ import java.util.Arrays;
  */
 public class bubbleSort {
     public static void sort(int array[]) {
+        long time1 = System.currentTimeMillis();
+        System.out.println("time1:" + time1);
         for (int i = 0; i < array.length - 1; i++) {
             //有序标记,让每一轮所循环的值都为true
             boolean isSorted = true;
@@ -26,12 +28,16 @@ public class bubbleSort {
                 break;
             }
         }
+        long time2 = System.currentTimeMillis();
+        System.out.println("time2:" + time2);
+
+        int time = (int) ((time2 - time1)/1000);
+        System.out.println("执行了：" + time + "秒");
     }
 
     public static void main(String[] args) {
         int[] array = new int[]{5,8,3,2,1,9,7,6};
         sort(array);
         System.out.println(Arrays.toString(array));
-        System.out.println(1111);
     }
 }

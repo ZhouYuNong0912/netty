@@ -1,4 +1,4 @@
-package com.netty.secodexample;
+package com.nettyold.secodexample;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

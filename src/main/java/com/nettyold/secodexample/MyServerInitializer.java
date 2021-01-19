@@ -1,4 +1,4 @@
-package com.netty.secodexample;
+package com.nettyold.secodexample;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -11,10 +11,10 @@ import io.netty.util.CharsetUtil;
 
 /**
  * @author 周雨农
- * @date 2020-05-19 21:43
+ * @date 2020-05-19 21:11
  * @description
  */
-public class MyClientInitializer extends ChannelInitializer<SocketChannel> {
+public class MyServerInitializer extends ChannelInitializer<SocketChannel> {
     @Override
     protected void initChannel(SocketChannel socketChannel) throws Exception {
         ChannelPipeline pipeline = socketChannel.pipeline();
@@ -25,6 +25,6 @@ public class MyClientInitializer extends ChannelInitializer<SocketChannel> {
         //设置字符集为UTF-8
         pipeline.addLast(new StringDecoder(CharsetUtil.UTF_8));
         pipeline.addLast(new StringEncoder(CharsetUtil.UTF_8));
-        pipeline.addLast(new MyClientHandler());
+        pipeline.addLast(new MyServerHandler());
     }
 }
